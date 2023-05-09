@@ -1,0 +1,22 @@
+defaults:
+ - data: LaMP_7
+ - _self_
+
+model: google/flan-t5-base
+
+trainer:
+  per_device_eval_batch_size: 24
+  per_device_train_batch_size: 32
+  gradient_accumulation_steps: 1
+  max_grad_norm: 1.0
+  seed: 980406
+  warmup_steps: 4000
+  lr: 5.0e-5
+  weight_decay: 1.0e-4
+  max_epochs: 20
+  label_smoothing_factor: 0.0
+  limit_train_number: null
+  limit_dev_number: null
+  limit_test_number: null
+  fast_dev_run: false
+  val_check_internal: 1.0

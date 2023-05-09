@@ -1,0 +1,6 @@
+dataset: data/LaMP_5
+train_max_src_len: 512
+train_max_trg_len: 512
+gen_max_len: 13
+gen_min_len: 6
+num_beams: 4
